@@ -29,7 +29,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 
 
-streamlit.text(fruityvice_response)
+
 
 streamlit.header("Fruityvice Fruit Advice!")
 
