@@ -26,14 +26,6 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
 fruits_to_show = my_fruit_list.loc[fruits_selected]
-
-
-
-
-
-
-  
-  
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
@@ -60,8 +52,3 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-
-  
-
-
-
