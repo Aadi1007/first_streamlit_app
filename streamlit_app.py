@@ -36,8 +36,6 @@ streamlit.dataframe(fruityvice_normalized)
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
-install -U pyasn1==0.2.3 pyasn1-modules=0.0.9
-
 import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
